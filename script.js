@@ -145,7 +145,7 @@ function changeColor(e) {
     e.target.style.opacity = "1";
     e.target.style.backgroundColor = `rgb(${R}, ${G}, ${B})`;
   } else if (currentMode === "eraser") {
-    e.target.style.backgroundColor = "transparent";
+    e.target.style.cssText = "background-color: transparent;";
   } else if (currentMode === "pencil") {
     if (e.target.style.opacity == "0.1") {
       e.target.style.opacity = "0.2";
