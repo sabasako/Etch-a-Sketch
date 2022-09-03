@@ -108,6 +108,7 @@ body {
   margin-bottom: 3rem;
   display: grid;
   position: relative;
+  cursor: crosshair;
 }
 
 .grid-lines-click {
