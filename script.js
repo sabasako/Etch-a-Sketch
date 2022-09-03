@@ -27,6 +27,7 @@ function gridSize(size) {
     document.querySelector(`.sketch-squares${i}`).style.backgroundColor =
       "'transparent'";
     div.addEventListener("mouseover", changeColor);
+    div.addEventListener("mousedown", changeColor);
   }
   sketch.style.cssText = `grid-template-columns: repeat(${range.value}, 1fr)`;
 }
@@ -135,39 +136,41 @@ clear.addEventListener("click", function () {
 ////////////////////////
 
 function changeColor(e) {
-  if (currentMode === "color") {
-    e.target.style.opacity = "1";
-    e.target.style.backgroundColor = penColor;
-  } else if (currentMode === "rainbow") {
-    let R = getRandomInt(256);
-    let G = getRandomInt(256);
-    let B = getRandomInt(256);
-    e.target.style.opacity = "1";
-    e.target.style.backgroundColor = `rgb(${R}, ${G}, ${B})`;
-  } else if (currentMode === "eraser") {
-    e.target.style.cssText = "background-color: transparent;";
-  } else if (currentMode === "pencil") {
-    if (e.target.style.opacity == "0.1") {
-      e.target.style.opacity = "0.2";
-    } else if (e.target.style.opacity == "0.2") {
-      e.target.style.opacity = "0.3";
-    } else if (e.target.style.opacity == "0.3") {
-      e.target.style.opacity = "0.4";
-    } else if (e.target.style.opacity == "0.4") {
-      e.target.style.opacity = "0.5";
-    } else if (e.target.style.opacity == "0.5") {
-      e.target.style.opacity = "0.6";
-    } else if (e.target.style.opacity == "0.6") {
-      e.target.style.opacity = "0.7";
-    } else if (e.target.style.opacity == "0.7") {
-      e.target.style.opacity = "0.8";
-    } else if (e.target.style.opacity == "0.8") {
-      e.target.style.opacity = "0.9";
-    } else if (e.target.style.opacity == "0.9") {
-      e.target.style.opacity = "0.999";
-    } else if (e.target.style.opacity !== "0.999") {
-      e.target.style.backgroundColor = "#000000";
-      e.target.style.opacity = "0.2";
+  if (e.buttons === 1) {
+    if (currentMode === "color") {
+      e.target.style.opacity = "1";
+      e.target.style.backgroundColor = penColor;
+    } else if (currentMode === "rainbow") {
+      let R = getRandomInt(256);
+      let G = getRandomInt(256);
+      let B = getRandomInt(256);
+      e.target.style.opacity = "1";
+      e.target.style.backgroundColor = `rgb(${R}, ${G}, ${B})`;
+    } else if (currentMode === "eraser") {
+      e.target.style.cssText = "background-color: transparent;";
+    } else if (currentMode === "pencil") {
+      if (e.target.style.opacity == "0.1") {
+        e.target.style.opacity = "0.2";
+      } else if (e.target.style.opacity == "0.2") {
+        e.target.style.opacity = "0.3";
+      } else if (e.target.style.opacity == "0.3") {
+        e.target.style.opacity = "0.4";
+      } else if (e.target.style.opacity == "0.4") {
+        e.target.style.opacity = "0.5";
+      } else if (e.target.style.opacity == "0.5") {
+        e.target.style.opacity = "0.6";
+      } else if (e.target.style.opacity == "0.6") {
+        e.target.style.opacity = "0.7";
+      } else if (e.target.style.opacity == "0.7") {
+        e.target.style.opacity = "0.8";
+      } else if (e.target.style.opacity == "0.8") {
+        e.target.style.opacity = "0.9";
+      } else if (e.target.style.opacity == "0.9") {
+        e.target.style.opacity = "0.999";
+      } else if (e.target.style.opacity !== "0.999") {
+        e.target.style.backgroundColor = "#000000";
+        e.target.style.opacity = "0.2";
+      }
     }
   }
 }
