@@ -11,13 +11,12 @@ This is a browser version of something between a sketchpad and an Etch-A-Sketch.
 
 ## Features
 <ul>
-  <li>Select any color for the pen or background</li>
-  <li>Color mode lets you paint each cell with your selected color</li>
-  <li>Rainbow mode lets you paint each cell with random color</li>
-  <li>Pencil mode works like a real pencil, more you draw darker it gets</li>
-  <li>Eraser does what it's supposed to do</li>
-  <li>You can create a grid up to 64x64.</li>
-  <li>Toggle grid lines to see grid lines</li>
+  <li>Select any color for the pen or background.</li>
+  <li>Color mode lets you paint each cell with your selected color.</li>
+  <li>Rainbow mode lets you paint each cell with a random color.</li>
+  <li>Pencil mode works like a real pencil, more you draw darker it gets.</li>
+  <li>Eraser does what it's supposed to do.</li>
+  <li>Create a grid up to 64x64.</li>
 </ul>
 
 [Watch Live](https://sabasako.github.io/Etch-a-Sketch/)
