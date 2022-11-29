@@ -1,5 +1,6 @@
 "use strict";
 
+const sketchSection = document.querySelector(".section-sketch");
 const sketch = document.querySelector(".sketch");
 const color = document.querySelector(".color");
 const rainbow = document.querySelector(".rainbow");
@@ -174,3 +175,6 @@ function changeColor(e) {
     }
   }
 }
+
+sketchSection.addEventListener("dragstart", (e) => e.preventDefault());
+sketchSection.addEventListener("drop", (e) => e.preventDefault());

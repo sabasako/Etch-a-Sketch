@@ -187,6 +187,17 @@ body {
   opacity: 0.2;
 }
 
+@media (max-height: 850px) {
+  .footer {
+    width: 340px;
+    margin: 0 auto;
+    margin-top: 5rem;
+  }
+  .copyright {
+    position: static;
+    transform: translateX(0);
+  }
+}
 @media (max-width: 1150px) {
   html {
     font-size: 56.25%;
